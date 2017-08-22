@@ -11,10 +11,11 @@ var users = require('./routes/users');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost:8080/database',function(err){
-  if(err)
-    throw err;
+mongoose.connect("mongodb://localhost/database", function(err) {
+  if (err) throw err;
+  console.log("Database connected!"); 
 });
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
